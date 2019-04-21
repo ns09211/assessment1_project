@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Details</title>
+    <style media="screen">
+      input {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .header {
+        background: burlywood;
+        padding: 10px;
+      }
+      .header input{
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>User Detail Page</h1>
+        <form class="head_form" action="http://localhost:5000/find/user" method="post">
+          <input type="text" name="u_email" required placeholder="Search User">
+          <input type="submit" name="find_data" value="Search">
+        </form>
+      </div>
+      <h1>Register Form</h1>
+      <div class="form_holder">
+        <form class="user_form" name="inp_form" action="http://localhost:5000/create/user" method="post">
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="text" name="email" placeholder="Email" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <input type="text" name="ph_num" placeholder="Phone Number" required maxlength="10">
+          <input type="submit" name="add_data" value="Submit">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
